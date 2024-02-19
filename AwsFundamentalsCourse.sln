@@ -1,6 +1,36 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Sqs", "3.Sqs", "{AE28BEE1-B578-439A-B596-D991B9851F5A}"
+	ProjectSection(SolutionItems) = preProject
+		3.Sqs\Customers.Api\appsettings.Development.json = 3.Sqs\Customers.Api\appsettings.Development.json
+		3.Sqs\Customers.Api\appsettings.json = 3.Sqs\Customers.Api\appsettings.json
+		3.Sqs\Customers.Api\Contracts\Data\CustomerDto.cs = 3.Sqs\Customers.Api\Contracts\Data\CustomerDto.cs
+		3.Sqs\Customers.Api\Contracts\Requests\CustomerRequest.cs = 3.Sqs\Customers.Api\Contracts\Requests\CustomerRequest.cs
+		3.Sqs\Customers.Api\Contracts\Requests\UpdateCustomerRequest.cs = 3.Sqs\Customers.Api\Contracts\Requests\UpdateCustomerRequest.cs
+		3.Sqs\Customers.Api\Contracts\Responses\CustomerResponse.cs = 3.Sqs\Customers.Api\Contracts\Responses\CustomerResponse.cs
+		3.Sqs\Customers.Api\Contracts\Responses\GetAllCustomersResponse.cs = 3.Sqs\Customers.Api\Contracts\Responses\GetAllCustomersResponse.cs
+		3.Sqs\Customers.Api\Controllers\CustomerController.cs = 3.Sqs\Customers.Api\Controllers\CustomerController.cs
+		3.Sqs\Customers.Api\Controllers\FromMultiSourceAttribute.cs = 3.Sqs\Customers.Api\Controllers\FromMultiSourceAttribute.cs
+		3.Sqs\Customers.Api\Customers.Api.csproj = 3.Sqs\Customers.Api\Customers.Api.csproj
+		3.Sqs\Customers.Api\Database\DatabaseInitializer.cs = 3.Sqs\Customers.Api\Database\DatabaseInitializer.cs
+		3.Sqs\Customers.Api\Database\DbConnectionFactory.cs = 3.Sqs\Customers.Api\Database\DbConnectionFactory.cs
+		3.Sqs\Customers.Api\Database\GuidTypeHandler.cs = 3.Sqs\Customers.Api\Database\GuidTypeHandler.cs
+		3.Sqs\Customers.Api\Domain\Customer.cs = 3.Sqs\Customers.Api\Domain\Customer.cs
+		3.Sqs\Customers.Api\Mapping\ApiContractToDomainMapper.cs = 3.Sqs\Customers.Api\Mapping\ApiContractToDomainMapper.cs
+		3.Sqs\Customers.Api\Mapping\DomainToApiContractMapper.cs = 3.Sqs\Customers.Api\Mapping\DomainToApiContractMapper.cs
+		3.Sqs\Customers.Api\Mapping\DomainToDtoMapper.cs = 3.Sqs\Customers.Api\Mapping\DomainToDtoMapper.cs
+		3.Sqs\Customers.Api\Mapping\DtoToDomainMapper.cs = 3.Sqs\Customers.Api\Mapping\DtoToDomainMapper.cs
+		3.Sqs\Customers.Api\Program.cs = 3.Sqs\Customers.Api\Program.cs
+		3.Sqs\Customers.Api\Properties\launchSettings.json = 3.Sqs\Customers.Api\Properties\launchSettings.json
+		3.Sqs\Customers.Api\Repositories\CustomerRepository.cs = 3.Sqs\Customers.Api\Repositories\CustomerRepository.cs
+		3.Sqs\Customers.Api\Repositories\ICustomerRepository.cs = 3.Sqs\Customers.Api\Repositories\ICustomerRepository.cs
+		3.Sqs\Customers.Api\Services\CustomerService.cs = 3.Sqs\Customers.Api\Services\CustomerService.cs
+		3.Sqs\Customers.Api\Services\GitHubService.cs = 3.Sqs\Customers.Api\Services\GitHubService.cs
+		3.Sqs\Customers.Api\Services\ICustomerService.cs = 3.Sqs\Customers.Api\Services\ICustomerService.cs
+		3.Sqs\Customers.Api\Services\IGitHubService.cs = 3.Sqs\Customers.Api\Services\IGitHubService.cs
+		3.Sqs\Customers.Api\Validation\CustomerRequestValidator.cs = 3.Sqs\Customers.Api\Validation\CustomerRequestValidator.cs
+		3.Sqs\Customers.Api\Validation\ValidationExceptionMiddleware.cs = 3.Sqs\Customers.Api\Validation\ValidationExceptionMiddleware.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Sns", "4.Sns", "{BA648C25-CB9E-4FAA-AF91-86A37CCEA382}"
 EndProject
