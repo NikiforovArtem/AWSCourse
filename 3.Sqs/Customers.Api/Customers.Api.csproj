@@ -12,6 +12,9 @@
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.0" />
         <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.2" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+
+        <PackageReference Include="AWSSDK.SQS" Version="3.7.300.52" />
+
     </ItemGroup>
 
 </Project>

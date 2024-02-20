@@ -1,4 +1,6 @@
+using Amazon.SQS;
 using Customers.Api.Database;
+using Customers.Api.Messaging;
 using Customers.Api.Repositories;
 using Customers.Api.Services;
 using Customers.Api.Validation;
@@ -26,6 +28,11 @@ builder.Services.AddSwaggerGen();
 SqlMapper.AddTypeHandler(new GuidTypeHandler());
 SqlMapper.RemoveTypeMap(typeof(Guid));
 SqlMapper.RemoveTypeMap(typeof(Guid?));
+
+builder.Services.Configure<QueueSettings>(builder.Configuration.GetSection(QueueSettings.SettingsKey));
+
+builder.Services.AddSingleton<IAmazonSQS, AmazonSQSClient>();
+builder.Services.AddSingleton<ISqsMessenger, SqsMessenger>();
 
 builder.Services.AddSingleton<IDbConnectionFactory>(_ =>
     new SqliteConnectionFactory(config.GetValue<string>("Database:ConnectionString")!));
