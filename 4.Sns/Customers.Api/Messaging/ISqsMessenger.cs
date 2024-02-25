@@ -1,8 +1,9 @@
-﻿using Amazon.SQS.Model;
+﻿using Amazon.SimpleNotificationService.Model;
+using Amazon.SQS.Model;
 
 namespace Customers.Api.Messaging;
 
-public interface ISqsMessenger
+public interface ISnsMessenger
 {
-    Task<SendMessageResponse> SendMessageAsync<T>(T message);
+    Task<PublishResponse> PublishMessageAsync<T>(T message);
 }

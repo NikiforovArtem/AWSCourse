@@ -1,3 +1,4 @@
+using Amazon.SimpleNotificationService;
 using Amazon.SQS;
 using Customers.Api.Database;
 using Customers.Api.Messaging;
@@ -33,9 +34,10 @@ builder.Services.AddSingleton<IDbConnectionFactory>(_ =>
     new SqliteConnectionFactory(config.GetValue<string>("Database:ConnectionString")!));
 builder.Services.AddSingleton<DatabaseInitializer>();
 
-builder.Services.Configure<QueueSettings>(builder.Configuration.GetSection(QueueSettings.Key));
+builder.Services.Configure<TopicSettings>(builder.Configuration.GetSection(TopicSettings.Key));
 builder.Services.AddSingleton<IAmazonSQS, AmazonSQSClient>();
-builder.Services.AddSingleton<ISqsMessenger, SqsMessenger>();
+builder.Services.AddSingleton<IAmazonSimpleNotificationService, AmazonSimpleNotificationServiceClient>();
+builder.Services.AddSingleton<ISnsMessenger, SnsMessenger>();
 
 builder.Services.AddSingleton<ICustomerRepository, CustomerRepository>();
 builder.Services.AddSingleton<ICustomerService, CustomerService>();
