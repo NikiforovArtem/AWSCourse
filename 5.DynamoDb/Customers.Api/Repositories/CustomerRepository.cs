@@ -63,7 +63,7 @@ public class CustomerRepository : ICustomerRepository
         throw new NotImplementedException();
     }
 
-    public async Task<bool> UpdateAsync(CustomerDto customer)
+    public async Task<bool> UpdateAsync(CustomerDto customer, DateTime requestDate)
     {
         customer.UpdatedAt = DateTime.UtcNow;
         var customerAsJson = JsonSerializer.Serialize(customer);
@@ -72,7 +72,12 @@ public class CustomerRepository : ICustomerRepository
         var putItemRequest = new PutItemRequest
         {
             TableName = _tableItem,
-            Item = customerAsAttribute
+            Item = customerAsAttribute,
+            ConditionExpression = "UpdatedAt < :requestStarted",
+            ExpressionAttributeValues = new Dictionary<string, AttributeValue>
+            {
+                {":requestStarted", new AttributeValue{ S = requestDate.ToString("O")}}
+            }
         };
 
         var response = await _dynamoDb.PutItemAsync(putItemRequest);

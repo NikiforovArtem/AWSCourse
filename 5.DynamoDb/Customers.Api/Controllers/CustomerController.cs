@@ -53,6 +53,7 @@ public class CustomerController : ControllerBase
     public async Task<IActionResult> Update(
         [FromMultiSource] UpdateCustomerRequest request)
     {
+        var requestDate = DateTime.UtcNow;
         var existingCustomer = await _customerService.GetAsync(request.Id);
 
         if (existingCustomer is null)
@@ -61,7 +62,7 @@ public class CustomerController : ControllerBase
         }
 
         var customer = request.ToCustomer();
-        await _customerService.UpdateAsync(customer);
+        await _customerService.UpdateAsync(customer, requestDate);
 
         var customerResponse = customer.ToCustomerResponse();
         return Ok(customerResponse);
