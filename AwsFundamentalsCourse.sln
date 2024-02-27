@@ -46,6 +46,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretsManager.App", "7.Sec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLambda", "8.Lambda\SimpleLambda\src\SimpleLambda\SimpleLambda.csproj", "{8E49872A-8FAB-46F0-90C1-5632C8BE1060}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHttpLambda", "8.Lambda\LambdaEmptyServerless1\src\SimpleHttpLambda\SimpleHttpLambda.csproj", "{E051D515-7CA3-4D3E-8F20-B38BE07C33CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,7 @@ Global
 		{51F21AD7-BB3F-42ED-A691-C90596AE6E1B} = {8D27D9CA-8D14-4CD6-9827-A0837CFB03C3}
 		{AE9D6320-355F-46E7-B749-BEAFAF47A844} = {8D27D9CA-8D14-4CD6-9827-A0837CFB03C3}
 		{8E49872A-8FAB-46F0-90C1-5632C8BE1060} = {DC84F474-F046-44B8-8D2E-BCE6A285FDF5}
+		{E051D515-7CA3-4D3E-8F20-B38BE07C33CD} = {DC84F474-F046-44B8-8D2E-BCE6A285FDF5}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7C86248D-0739-4E1A-84F9-77A210ACA190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -129,5 +132,9 @@ Global
 		{8E49872A-8FAB-46F0-90C1-5632C8BE1060}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E49872A-8FAB-46F0-90C1-5632C8BE1060}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E49872A-8FAB-46F0-90C1-5632C8BE1060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E051D515-7CA3-4D3E-8F20-B38BE07C33CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E051D515-7CA3-4D3E-8F20-B38BE07C33CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E051D515-7CA3-4D3E-8F20-B38BE07C33CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E051D515-7CA3-4D3E-8F20-B38BE07C33CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
